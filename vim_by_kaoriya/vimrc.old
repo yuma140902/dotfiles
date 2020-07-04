@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim 8.1
 "
-" Last Change: 23-Mar-2019.
+" Last Change: 04-Mar-2019.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -30,6 +30,8 @@ scriptencoding utf-8
 "   :echo $HOME
 "   :echo $VIM
 "   :version
+
+"をyuma140902が一部改変したもの
 
 "---------------------------------------------------------------------------
 " サイトローカルな設定($VIM/vimrc_local.vim)があれば読み込む。読み込んだ後に
@@ -132,9 +134,10 @@ set smartcase
 " 編集に関する設定:
 "
 " タブの画面上での幅
-set tabstop=8
-" タブをスペースに展開しない (expandtab:展開する)
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+" タブをスペースに展開する (noexpandtab:展開しない)
+set expandtab
 " 自動的にインデントする (noautoindent:インデントしない)
 set autoindent
 " バックスペースでインデントや改行を削除できるようにする
@@ -151,14 +154,15 @@ set formatoptions+=mM
 "---------------------------------------------------------------------------
 " GUI固有ではない画面表示の設定:
 "
-" 行番号を非表示 (number:表示)
-set nonumber
+" 行番号を表示 (nonumber:非表示)
+set number
 " ルーラーを表示 (noruler:非表示)
 set ruler
-" タブや改行を非表示 (list:表示)
-set nolist
+" タブや改行を表示 (nolist:非表示)
+set list
 " どの文字でタブや改行を表示するかを設定
 "set listchars=tab:>-,extends:<,trail:-,eol:<
+set listchars=tab:>-,extends:<,trail:-,eol:$
 " 長い行を折り返して表示 (nowrap:折り返さない)
 set wrap
 " 常にステータス行を表示 (詳細は:he laststatus)
@@ -193,11 +197,11 @@ endif
 if has('unix') && !has('gui_running')
   let s:uname = system('uname')
   if s:uname =~? "linux"
-    " no need to use builtin_term for Linux
+    set term=builtin_linux
   elseif s:uname =~? "freebsd"
     set term=builtin_cons25
   elseif s:uname =~? "Darwin"
-    set term=builtin_beos-ansi
+    set term=beos-ansi
   else
     set term=builtin_xterm
   endif
@@ -245,3 +249,6 @@ if kaoriya#switch#enabled('disable-go-extra')
 endif
 
 " Copyright (C) 2009-2018 KaoriYa/MURAOKA Taro
+
+set fileencoding=utf-8
+
