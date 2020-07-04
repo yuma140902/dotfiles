@@ -1,0 +1,19 @@
+" ========== 編集設定 ==========
+" タブの画面上での幅
+set tabstop=2
+set shiftwidth=2
+
+" タブをスペースに展開する
+set expandtab
+
+
+" ========== 表示設定 ==========
+" 行番号を表示
+set number
+
+" 不可視文字の表示
+set listchars=tab:>-,extends:<,trail:-,eol:$
+
+
+" ========== その他 ==========
+set fileencoding=utf-8
