@@ -1,0 +1,25 @@
+" gVimでウィンドウの位置とサイズを記憶する
+" https://vim-jp.org/vim-users-jp/2010/01/28/Hack-120.html
+let g:winpos_file = expand("$VIM/.gvimwinpos")
+augroup SaveWindow
+  autocmd!
+  autocmd VimLeavePre * call s:save_window()
+  function! s:save_window()
+    let options = [
+      \ 'set columns=' . &columns,
+      \ 'set lines=' . &lines,
+      \ 'winpos ' . getwinposx() . ' ' . getwinposy(),
+      \ ]
+    call writefile(options, g:winpos_file)
+  endfunction
+augroup END
+
+if filereadable(g:winpos_file)
+  execute 'source' g:winpos_file
+endif
+
+
+
+" 色テーマ
+colorscheme koehler
+
