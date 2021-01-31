@@ -9,6 +9,7 @@
 [core]
 	autoCRLF = false
 	whitespace = cr-at-eol
+	editor = vim -N
 	#editor = ~/bin/vim/vim --nofork -c 'set fenc=utf-8' +1
 [alias]
 	plog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
@@ -16,3 +17,5 @@
 	ignore = "!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi"
 [gui]
 	recentrepo = Z:/dev/rust/snake/snake_game
+[credential]
+	helper = manager-core
