@@ -1,4 +1,4 @@
-" gVim‚ÅƒEƒBƒ“ƒhƒE‚ÌˆÊ’u‚ÆƒTƒCƒY‚ğ‹L‰¯‚·‚é
+" gVimã§ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã®ä½ç½®ã¨ã‚µã‚¤ã‚ºã‚’è¨˜æ†¶ã™ã‚‹
 " https://vim-jp.org/vim-users-jp/2010/01/28/Hack-120.html
 let g:winpos_file = expand("$VIM/.gvimwinpos")
 augroup SaveWindow
@@ -20,6 +20,6 @@ endif
 
 
 
-" Fƒe[ƒ}
+" è‰²ãƒ†ãƒ¼ãƒ
 colorscheme koehler
 
