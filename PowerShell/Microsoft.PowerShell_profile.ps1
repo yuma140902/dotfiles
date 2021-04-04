@@ -13,13 +13,18 @@ function MakeSymLink {
 }
 Set-Alias mklink MakeSymLink
 
-# zsh-like‚Èƒ^ƒu•âŠ®. ƒ^ƒu‚ğ‰Ÿ‚·‚Æ“ü—ÍÏ‚İ‚Ì‚à‚Ì‚©‚ç•âŠ®. •¡”Œó•â‚ª‚ ‚éê‡‚Íg—p‰Â”\‚È‚à‚Ì‚Ìˆê——‚ğ•\¦‚µ‚Â‚Â•âŠ®
+function CargoCompete {
+  cargo compete $args
+}
+Set-Alias atc CargoCompete
+
+# zsh-likeï¿½Èƒ^ï¿½uï¿½âŠ®. ï¿½^ï¿½uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ“ï¿½ï¿½ÍÏ‚İ‚Ì‚ï¿½ï¿½Ì‚ï¿½ï¿½ï¿½âŠ®. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â‚ªï¿½ï¿½ï¿½ï¿½ê‡ï¿½Ígï¿½pï¿½Â”\ï¿½È‚ï¿½ï¿½Ì‚Ìˆê——ï¿½ï¿½\ï¿½ï¿½ï¿½ï¿½ï¿½Â‚Â•âŠ®
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
-# posh-git (gitƒRƒ}ƒ“ƒh‚Ìƒ^ƒu•âŠ®) ‚ğ—LŒø‰»
-Import-Module posh-git
+# posh-git (gitï¿½Rï¿½}ï¿½ï¿½ï¿½hï¿½Ìƒ^ï¿½uï¿½âŠ®) ï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½
+#Import-Module posh-git
 
-# “ü—Íƒ~ƒX‚Ìƒr[ƒv‰¹‚ğÁ‚·
+# ï¿½ï¿½ï¿½Íƒ~ï¿½Xï¿½ï¿½ï¿½Ìƒrï¿½[ï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 Set-PSReadlineOption -BellStyle None
 
 # enable StarShip
