@@ -10,6 +10,7 @@
 	autoCRLF = false
 	whitespace = cr-at-eol
 	editor = vim -N
+	quotepath = false
 	#editor = ~/bin/vim/vim --nofork -c 'set fenc=utf-8' +1
 [alias]
 	plog = log --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
