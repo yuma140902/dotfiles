@@ -4,7 +4,7 @@ Param(
 )
 
 $repos_dir = Get-Item "~\repos"
-$auto_commit_repositries = @("local-settings", "school")
+$auto_commit_repositries = @("local-settings", "school", "random_private_stuff")
 $repositries = Get-ChildItem -Directory $repos_dir
 
 function auto_commit {
