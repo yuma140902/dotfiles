@@ -16,15 +16,17 @@ Set-Alias mklink MakeSymLink
 function CargoCompete {
   cargo compete $args
 }
-Set-Alias atc CargoCompete
+#Set-Alias atc CargoCompete
 
-# zsh-like�ȃ^�u�⊮. �^�u�������Ɠ��͍ς݂̂��̂���⊮. ������₪����ꍇ�͎g�p�\�Ȃ��̂̈ꗗ��\�����⊮
+Set-Alias atc atcoder-tools
+
+# zsh-likeなタブ補完. タブを押すと入力済みのものから補完. 複数候補がある場合は使用可能なものの一覧を表示しつつ補完
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
-# posh-git (git�R�}���h�̃^�u�⊮) ��L����
+# posh-git (gitコマンドのタブ補完) を有効化
 #Import-Module posh-git
 
-# ���̓~�X���̃r�[�v��������
+# 入力ミス時のビープ音を消す
 Set-PSReadlineOption -BellStyle None
 
 # enable StarShip
